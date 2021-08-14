@@ -1,0 +1,59 @@
+import {StyleSheet} from 'react-native'
+
+const styles=StyleSheet.create({
+    container:{
+        flex:1
+    },
+    profileCard:{
+        margin:20,
+        borderRadius:10,
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    avatar:{
+       marginBottom:20
+    },
+    content:{
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    button:{
+        borderWidth:2,
+        borderRadius:10,
+        borderColor:'#4953CF',
+        marginBottom:20
+    },
+    labelStyle:{
+        fontSize:16,
+        fontWeight:'bold',
+        color:'#4953CF'
+    },
+    bold:{
+        fontWeight:'bold'
+    },
+    infoCard:{
+        marginLeft:20,
+        marginBottom:20,
+        marginRight:20,
+        borderRadius:10,
+        paddingLeft:10,
+        paddingTop:10,
+        justifyContent:'center'
+    },
+    pinfo:{
+        fontSize:16
+    },
+    pinfoHeading:{
+        fontSize:25
+    },
+    buttonEdit:{
+        alignSelf:'center',
+        width:'90%',
+        borderWidth:2,
+        borderRadius:10,
+        borderColor:'#4953CF',
+        marginBottom:20
+    },
+})
+
+export default styles;

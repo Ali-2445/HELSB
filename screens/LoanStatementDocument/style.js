@@ -1,0 +1,163 @@
+import { StyleSheet } from "react-native";
+
+const styles=StyleSheet.create({
+    container:{
+        flex:1,
+        padding:20
+    },
+    helsb:{
+        fontSize:30,
+        fontWeight:'bold',
+        color:"#4953CF",
+        fontFamily:'SecularOne-Regular'
+    },
+    title:{
+        fontSize:23,marginTop:10
+    },
+    bold:{
+        fontWeight:'bold'
+    },
+    Paragraph:{
+        fontSize:15
+    },
+    card:{
+        marginTop:15,
+        backgroundColor:'#fff',
+        padding:10,
+        borderRadius:15,
+        paddingLeft:20
+    },
+    tableRow:{
+        borderBottomColor:'#fff'
+    },
+    firstColumn:{
+        flex:0.65
+    },
+    secondColumn:{
+        flex:0.15,justifyContent:'center'
+    },
+    thirdColumn:{
+        flex:0.2,justifyContent:'center'
+    },
+    linkContainer:{
+        paddingLeft:10,
+        marginTop:20,
+        fontSize:17
+    },
+    link:{
+        color:'#4953CF'
+    },
+    tableTitle:{
+        backgroundColor:'#4953CF',
+        borderTopLeftRadius:15,
+        borderTopRightRadius:15,
+        
+        height:60,
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    nopadingCard:{
+        marginTop:15,
+        backgroundColor:'#fff',
+        borderRadius:15,
+    },
+    titleText:{
+        fontSize:18,
+        color:'#fff'
+    },
+    TopRow:{
+        backgroundColor:'#E6E8FF'
+    },
+    loanType:{
+        color:'#486581',
+        fontWeight:'bold'
+    },
+    f:{
+        flex:0.4,
+        
+    },
+    s:{
+        flex:0.3,
+       
+    },
+    t:{
+        flex:0.3,
+        justifyContent:'center',
+        
+    },
+    left:
+    {
+        flex:0.5
+    },
+    right:{
+        flex:0.5
+    },
+    con:{
+        flexDirection:'row',
+        height:60,
+        marginTop:10
+    },
+    totalText:{
+        fontSize:18,
+        fontWeight:'bold',color:'#486581'
+    },
+    world:{
+        marginTop:15,
+        backgroundColor:'#E6E8FF',
+        borderRadius:25,
+        padding:20,
+        // justifyContent:'center',
+        // alignItems:'center',
+        // alignContent:'center'
+    },
+    qtitle:{
+        color:'#4953CF',
+        alignSelf:'center',
+        marginTop:10
+    },
+    title24:{
+        fontSize:18,
+        alignSelf:'center',
+        color:'black'
+    },
+    callView:{
+        alignSelf:'center',
+        flexDirection:'row'
+    },
+    callIcon:{
+        padding:5,
+        color:'#4953CF',
+        marginRight:10,
+        alignSelf:'center'
+    },
+    printCon:{
+        marginTop:30,
+        height:100
+    },
+    print:{
+    
+        width:120,
+        position:'absolute',
+        right:15,
+        top:50,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    download:{
+
+        width:160,
+        position:'absolute',
+        right:15,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    txt:{
+        color:'#4953CF',
+        fontSize:16
+    }
+    
+})
+
+export default styles;

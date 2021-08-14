@@ -1,0 +1,70 @@
+import { StyleSheet } from "react-native";
+
+const styles=StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:'#fff',
+    },
+    titleContainer:{
+        width:'100%',backgroundColor:'#F4F4F4',height:60,flexDirection:'row',alignItems:'center',paddingLeft:15
+    },
+    main:{
+        paddingLeft:20,
+        // paddingTop:20,
+        paddingRight:20
+    },
+    dottedContainer:{
+        marginTop:10,
+        borderWidth:2,
+        borderColor:'#BCBCBC',
+        borderStyle:'dashed',
+        borderRadius:10,
+        height:100
+    },
+    seperate:{
+        marginTop:15,
+        marginBottom:20
+    },
+    button:{
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    btnText:{
+        color:'#4953CF'
+    },
+    txtinput:{
+        borderWidth:1,
+        borderColor:'#BCBCBC',
+        backgroundColor:'#fff',
+        width:'90%',
+        borderRadius:10,
+        color:'black',
+        fontSize:16,
+        paddingLeft:15,
+        marginTop:10,
+        marginBottom:10
+    },
+    txtinputHeading:{
+        fontSize:17,paddingLeft:15,
+        marginTop:20
+    },
+    inputView:{
+        width:'100%',alignItems:'center'
+    },
+    multilineTxtInput:{
+        borderWidth:1,
+        borderColor:'#BCBCBC',
+        backgroundColor:'#fff',
+        width:'90%',
+        borderRadius:10,
+        color:'black',
+        fontSize:16,
+        paddingLeft:15,
+        marginTop:10,
+        marginBottom:10,
+        height:80
+    }
+})
+
+export default styles;
