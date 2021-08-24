@@ -1,6 +1,9 @@
 import { Platform, StyleSheet } from "react-native";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { Dimensions } from "react-native";
 
 
+var { height, width } = Dimensions.get("window");
 const styles=StyleSheet.create({
     getTitleHeight(heightt){
         return StyleSheet.create({
@@ -14,24 +17,37 @@ const styles=StyleSheet.create({
         backgroundColor:'#fff',
     },
     header:{
-        flex:1.2,
-        backgroundColor:'#4953CF'
+        // flex:0.36,
+        // flex:2,
+        // height:hp('33%'),
+        // width:wp('100%')
+        height:height*0.33,
+       
+        // backgroundColor:'#4953CF'
     },
     inputContainer:{
-        flex:2,
+        // flex:2.3,
+        // height:hp('40%'),
+        height:height*0.4,
         padding:10,
         backgroundColor:'#fff',
         margin:10,
+        
     },
     buttonContainer:{
-        flex:0.8,
-        height:100,
+        // flex:0.8,
+        // height:hp('27%'),
+        height:height*0.27,
+        width:'100%',
+        // height:100,
         margin:5,
+        marginTop:0,
         position:'relative',
+       
     },
     textInput:{
         color:'black',
-        padding:10,
+        padding:8,
         paddingLeft:5,
         fontSize:18,
         borderWidth:1,
@@ -64,12 +80,13 @@ const styles=StyleSheet.create({
     
     forget:{
         fontSize:17,
-        marginTop:20,
+        marginTop:10,
         marginBottom:20
     },
     signupbutton:{
         color:'#1e90ff',
-        fontSize:17
+        fontSize:17,
+       
     },
     forgetConatiner:{
         flexDirection:'row',
@@ -88,7 +105,7 @@ const styles=StyleSheet.create({
         fontWeight:'bold',
         fontSize:40,
         position:'absolute',
-        bottom:30
+        bottom:40
     },
     triangleCorner: {
         backgroundColor: "transparent",

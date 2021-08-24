@@ -1,5 +1,6 @@
 import { Platform, StyleSheet } from "react-native";
-
+import { Dimensions } from "react-native";
+var { height, width } = Dimensions.get("window");
 
 const styles=StyleSheet.create({
     container:{
@@ -7,24 +8,26 @@ const styles=StyleSheet.create({
         backgroundColor:'#fff',
     },
     header:{
-        flex:1.2,
-        backgroundColor:'#4953CF'
+        // flex:2,
+        height:height*0.33
     },
     inputContainer:{
-        flex:2,
+        // flex:2.3,
         padding:10,
+        height:height*0.38,
         backgroundColor:'#fff',
         margin:10,
     },
     buttonContainer:{
-        flex:0.8,
-        height:100,
+        // flex:0.8,
+        height:height*0.29,
+        // height:100,
         margin:5,
-        position:'relative',
+        // position:'relative',
     },
     textInput:{
         color:'black',
-        padding:10,
+        padding:8,
         paddingLeft:5,
         fontSize:18,
         borderWidth:1,
@@ -37,7 +40,7 @@ const styles=StyleSheet.create({
         fontWeight:'bold',
     },
     inputTextWrapper:{
-        marginTop:20,
+        marginTop:5,
     },
     button:{
         color:'#fff',
@@ -63,8 +66,8 @@ const styles=StyleSheet.create({
     },
     forget:{
         fontSize:17,
-        marginTop:20,
-        marginBottom:20
+        marginTop:10,
+        marginBottom:10
     },
     signupbutton:{
         color:'#1e90ff',
@@ -73,7 +76,8 @@ const styles=StyleSheet.create({
     forgetConatiner:{
         flexDirection:'row',
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        // height:height*0.1
     },
     title:{
         marginLeft:20,
@@ -88,7 +92,7 @@ const styles=StyleSheet.create({
         fontWeight:'bold',
         fontSize:40,
         position:'absolute',
-        bottom:20
+        bottom:40
     },
     googleText:{
         // alignSelf:'center',
@@ -107,10 +111,9 @@ const styles=StyleSheet.create({
     dashboard:{
         fontSize:16,
         color:'#fff',
-        // marginTop:30,
         marginLeft:20,
         position:'absolute',
-        bottom:70
+        bottom:90
 
     },
     googleLogo:{

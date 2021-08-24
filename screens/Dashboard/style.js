@@ -6,17 +6,19 @@ const styles=StyleSheet.create({
         padding:10
     },
     progressbarcontainer:{
-        flex:0.7,
+        // flex:0.7,
+        // width:'90%',
         alignItems:'flex-start',
         justifyContent:'center',
         paddingLeft:10,
         paddingRight:10
     },
     LoanContainer:{
-        flex:1,
+        height:80,
         paddingLeft:10,
         flexDirection:'row',
-        paddingRight:10
+        paddingRight:10,
+        
     },
     LoanAndScholarshipContainer:{
         flex:5,

@@ -68,6 +68,7 @@ const DepartmentScreen=({navigation})=>{
     const[value,setVal]=useState('')
     return(
         <View style={styles.container}>
+       
             <View style={styles.searchContainer}>
                 <SearchBar placeholder='Search' onChangeText={(val)=>{
                     setVal(val)

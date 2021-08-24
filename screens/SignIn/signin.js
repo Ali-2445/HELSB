@@ -1,41 +1,63 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {
   TextInput,
   View,
   Text,
   TouchableOpacity,
   KeyboardAvoidingView,
-  Image
+  Image,ScrollView
 } from 'react-native';
-
+import { Dimensions } from 'react-native';
+import Svg, { Path, } from 'react-native-svg';
 import styles from '../SignIn/style';
 
 const signin=({navigation})=>{
-  const [number,setNumber]=useState('')
   const [email,setEmail]=useState('')
-  const [is,setId]=useState('')
-  const [height,setHeight]=useState('')
+  const [pass,setPass]=useState('')
+  const height=Dimensions.get('screen').height;
+  
+  const [isLandScape,setLandscape]=useState(false)
+  const[widthCurve,setCurve]=useState(Dimensions.get('screen').width+90)
+
+  //// UseEffect Hook
+  useEffect(()=>{
+   
+    Dimensions.addEventListener('change',()=>{
+      if(Dimensions.get('screen').height>Dimensions.get('screen').width){
+        setCurve(Dimensions.get('screen').width+90)
+        setLandscape(false)
+  
+      }else if(Dimensions.get('screen').height<Dimensions.get('screen').width){
+        setCurve(Dimensions.get('screen').width+90)
+        setLandscape(true)
+      }
+    })
+    
+  },[isLandScape,widthCurve])
+
+
+  ////Signin screen code
+
+  function Component(){
     return(
         <KeyboardAvoidingView style={styles.container}>
-            <View style={styles.header} onLayout={(event) => {
-                 setHeight(event.nativeEvent.layout) }}>
-               <View style={[styles.triangleCornerTopRight,styles.triangleCorner]} />
-            <View style={[styles.triangleRightCorner,styles.triangleBottomRight]}/>
-            
-            <View style={styles.circle}/>
-            
-            <View style={styles.secondOval}/>
-            <View style={styles.secondCircle}/>
-            <View style={styles.thirdCircle}/>
-            <View style={styles.fourthCircle}/>
-            <View style={styles.fifthCircle}/>
-              <Text style={styles.dashboard}>
+        
+            <View style={styles.header}>
+          <Svg >
+              <Path
+                  fill='#4953CF'
+                  d={`M0,190 C320,300 230,-15 ${widthCurve},70 L0,-400  Z`}
+                  stroke='#4953CF'
+              />
+              
+            </Svg>
+            <Text style={{marginLeft:20,color:'#fff',fontSize:16,position:'absolute',top:height*0.16}}>
                 Dashboard
               </Text>
-              <Text style={styles.SignInTitle}>
+              <Text style={{marginLeft:20,color:'#fff',fontWeight:'bold',fontSize:40,position:'absolute',top:height*0.18}}>
                 SignIn
               </Text>
-            </View>
+          </View>
             <KeyboardAvoidingView style={styles.inputContainer}>
               <TouchableOpacity style={styles.google}>
                 <Image source={require('../../images/googlelogo.png')} style={styles.googleLogo}/>
@@ -65,7 +87,7 @@ const signin=({navigation})=>{
                       style={styles.textInput}
                       secureTextEntry={true}
                       onChangeText={(val)=>{
-                        setId(val)
+                        setPass(val)
                       }}
                   />
               </View>
@@ -98,7 +120,27 @@ const signin=({navigation})=>{
               </TouchableOpacity>
               </View>
             </View>
+            
         </KeyboardAvoidingView>
+    )
+  }
+
+  ///Conditional Rendering
+  function Cond(){
+    if(isLandScape){
+      return(
+        <ScrollView>
+           <Component/>
+        </ScrollView>
+      )
+    }else{
+      return(
+        <Component/>      
+      )
+    }
+  }
+    return(
+       <Cond/>
     )
 }
 

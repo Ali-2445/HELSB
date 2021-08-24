@@ -15,6 +15,7 @@ import LoanStatement from './screens/LoanStatementDocument/LoanStatement';
 import StudentTopTab from './components/StudentScholarShipTopTab';
 import PayOff from './screens/PayOff/PayOff';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import HeaderView from './screens/HeaderView';
 
 const App=()=>{
   LogBox.ignoreLogs(['Reanimated 2']);
@@ -65,6 +66,13 @@ const App=()=>{
             },title:'Student Scholarship',headerStyle:{
                 height:70
             }}}/>
+
+          <Stack.Screen name='Header' component={HeaderView} options={{headerTitleAlign:'center',headerTitleStyle:{
+                color:'#4953CF'
+            },title:'Student Scholarship',headerStyle:{
+                height:70
+            }}}/>
+         
 
 <Stack.Screen name='Repayment' component={PayOff} options={{headerTitleAlign:'center',headerTitleStyle:{
                 color:'#4953CF'

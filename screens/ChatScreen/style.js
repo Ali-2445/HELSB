@@ -6,12 +6,13 @@ const styles=StyleSheet.create({
         flexDirection:'column',
     },
     searchContainer:{
-        flex:0.17,
+        // flex:0.2,
         backgroundColor:'#4953CF',
-        justifyContent:'center'
+        justifyContent:'center',
+        height:90
     },
     chatsContainer:{
-        flex:0.83,
+        flex:1,
         margin:20,
       
         
